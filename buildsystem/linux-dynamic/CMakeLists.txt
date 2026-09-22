@@ -152,6 +152,7 @@ include_directories(
     "${CMAKE_SOURCE_DIR}/../../src/tiled"
     "${CMAKE_SOURCE_DIR}/../../src/treetree"
     "${CMAKE_SOURCE_DIR}/../../src/xhtml"
+    "${GLEW_INCLUDE_DIRS}"
     "${FREETYPE_INCLUDE_DIR_ft2build}"
     "${SDL2_INCLUDE_DIR}"
 )
@@ -239,7 +240,7 @@ target_link_libraries(
     "${Boost_LIBRARIES}"
     "${ZLIB_LIBRARIES}"
     "${OPENGL_LIBRARIES}"
-    "${GLEW_LIBRARIES}"
+    GLEW::GLEW
     "${FREETYPE_LIBRARIES}"
     "${SDL2_LIBRARY}"
     "${SDL2_IMAGE_LIBRARIES}"
